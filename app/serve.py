@@ -1,0 +1,13 @@
+"""Tiny local preview server for the Sacred Circles Supply Directory."""
+import os
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+class Handler(SimpleHTTPRequestHandler):
+    def end_headers(self):
+        self.send_header("Cache-Control", "no-store")
+        super().end_headers()
+
+print("Serving Sacred Circles Supply Directory at http://localhost:4173", flush=True)
+HTTPServer(("127.0.0.1", 4173), Handler).serve_forever()

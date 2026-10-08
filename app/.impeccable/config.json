@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-05T15:55:34.595Z",
+        "reason": "Claude: the only uppercase text is the 31-char letterspaced brand wordmark in the header, a short label rather than body copy"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-05T15:55:34.625Z",
+        "reason": "Claude: #fbf4f2 is the deliberate rose-pearl base of the divine-feminine palette the user requested on 2026-10-02, not a default beige"
+      }
+    ]
+  }
+}
